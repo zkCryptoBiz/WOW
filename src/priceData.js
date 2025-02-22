@@ -1,6 +1,6 @@
 // DexScreener API endpoint for Solana tokens
 const API_URL = 'https://api.dexscreener.com/latest/dex/search/?q=';
-const TOKEN_ADDRESS = '5hvzlqs4qkp5thxfsg3bm7wy7rlztxbjndutm87n2p44';
+const TOKEN_ADDRESS = 'FvXKHksfxFou7Jvx3144yKySJC9VGkBLWHigEBudwow';
 
 export async function fetchTokenData() {
   try {
