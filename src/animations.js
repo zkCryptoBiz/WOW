@@ -75,7 +75,7 @@ export function initSoundEffects() {
 
 export function initCopyAddress() {
   window.copyContract = function() {
-    const address = '53cAR9mpCvTJtNzzfk2THM2bmFs9LvRFwHUYL26Wpump';
+    const address = 'FvXKHksfxFou7Jvx3144yKySJC9VGkBLWHigEBudwow';
     navigator.clipboard.writeText(address);
     
     const button = document.querySelector('.contract-address button');
