@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WOW COIN 🚀</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  body {
+    cursor: url('images/pngwing.png') 16 16, crosshair; /* Replace 'scope.png' with your image path */
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .click-text {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 238, 0);
+    user-select: none;
+    animation: rise-and-fade 1s ease-in-out forwards;
+    pointer-events: none;
+  }
+
+  @keyframes rise-and-fade {
+    0% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  }
+</style>
+<body>
+  <script>
+    document.body.addEventListener('click', function(e) {
+      // Create a new <span> element for the +1
+      const clickText = document.createElement('span');
+      clickText.innerText = '+1';
+      clickText.className = 'click-text';
+
+      // Position the text at the cursor click location
+      clickText.style.left = e.pageX + 'px';
+      clickText.style.top = e.pageY + 'px';
+
+      // Add the +1 element to the document body
+      document.body.appendChild(clickText);
+
+      // Remove the +1 element after the animation ends
+      setTimeout(() => {
+        clickText.remove();
+      }, 1000); // Matches the animation duration in CSS
+    });
+  </script> 
+  <div class="background-images"></div>
+  
+  <nav class="nav-bar">
+    <div class="nav-links">
+      <a href="index.html#home">HOME</a>
+      <a href="index.html#about">ABOUT</a>
+      <a href="index.html#contract">CONTRACT</a>
+      <a href="index.html#lore">LORE</a>
+      <a href="index.html#memes">MEMES</a>
+      <a href="index.html#roadmap">ROADMAP</a>
+    </div>
+  </nav>
+
+  <div class="popup">
+    <img src="https://gcdnb.pbrd.co/images/C2JC9LvUItoP.png?o=1" alt="WOW">
+  </div>
+
+  <div class="mlg-container" id="home">
+    <audio id="wow-sound" src="https://www.myinstants.com/media/sounds/eddy-wally-wow-sound-effect.mp3"></audio>
+    <audio id="airhorn" src="https://www.myinstants.com/media/sounds/air-horn-sound-effect.mp3"></audio>
+    
+    <h1 class="mega-rainbow-text animate__animated animate__bounce animate__infinite">WOW COIN</h1>
+    
+    <div class="wow-container">
+      <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHFlOW1qMGZ1MjZiNDdiYmVhbHZzbGhxbDNxanpzd3R0NmFpbWx2aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/P4n1h6H0MRKqn2MxhY/giphy.webp" alt="Wow" class="wow-image animate__animated animate__pulse animate__infinite">
+    </div>
+
+    <div class="social-links">
+      <a href="https://twitter.com/wow_cto" target="_blank" class="social-link">
+        <img src="https://gcdnb.pbrd.co/images/ayXYKIHG3zBC.png?o=1">
+      </a>
+      <a href="https://t.me/WOWportalsol" target="_blank" class="social-link">
+        <img src="https://gcdnb.pbrd.co/images/nG0fNrJoB4M7.png?o=1">
+      </a>
+      <a href="https://dexscreener.com/solana/fiznfriku6anzz6hstqhycs3hyxb4ziflfuxzxf7q1jz" target="_blank" class="social-link">
+        <img src="https://static.wixstatic.com/media/7c6969_61c24e9e8fbf401c83fd4a02653c8fd2~mv2.png/v1/fill/w_108,h_124,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/66d2557f9b677e4169430b93_drip-dexscreener-icon.png" alt="DexScreener">
+      </a>
+      <a href="https://www.dextools.io/app/en/solana/pair-explorer/FiZnFRiKU6anZz6hSTQhycs3HYxB4zifLFuxZxf7Q1jZ?t=1736359713639" target="_blank" class="social-link">
+        <img src="https://static.wixstatic.com/media/7c6969_679822d07bf44ea28aa68621633f7929~mv2.png/v1/fill/w_107,h_124,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/66d2557f9b677e4169430b90_drip-dextools-icon.png" alt="DexTools">
+      </a>
+    </div>
+
+    <div class="button-container">
+      <button class="mlg-button" onclick="openLink()">BUY NOW</button>
+      <button class="mlg-button play-button" onclick="scrollToGame()">PLAY NOW</button>
+      <button class="mlg-button play-button" onclick="scrollToMeme()">WOW GEN</button>
+    </div>
+
+    <!-- Rest of the content remains the same -->
+    <script>
+      function openLink() {
+        window.location.href = "https://raydium.io/swap/?inputMint=sol&outputMint=53cAR9mpCvTJtNzzfk2THM2bmFs9LvRFwHUYL26Wpump";
+      }
+
+      function scrollToGame() {
+        document.getElementById('game').scrollIntoView({ behavior: 'smooth' });
+        playWow(); // Play the wow sound when clicking the play button
+      }
+
+      function scrollToMeme() {
+        document.getElementById('memegen').scrollIntoView({ behavior: 'smooth' });
+        playWow(); // Play the wow sound when clicking the play button
+      }
+
+    </script>
+
+
+    <div class="token-stats">
+      <div class="stat-card">
+        <div class="stat-label">PRICE</div>
+        <div class="stat-value" id="token-price">$0.00000000</div>
+        <div class="price-change" id="price-change">0.00%</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">MARKET CAP</div>
+        <div class="stat-value" id="market-cap">$0.00</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">24H VOLUME</div>
+        <div class="stat-value" id="volume-24h">$0.00</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="about" class="section">
+    <h2 class="rainbow-text">ABOUT WOW COIN</h2>
+    <div class="content-box">
+      <p>BASED ON THE LEGENDARY EDDY WALLY'S "WOW!" 🎭</p>
+      <p>THE MOST MLG MEMECOIN IN EXISTENCE 🎮</p>
+      <p>FUELED BY MOUNTAIN DEW AND DORITOS 🥤</p>
+      <div class="wow-features">
+        <div class="feature">
+          <h3>💥 MLG APPROVED</h3>
+          <p>420% CERTIFIED DANK</p>
+        </div>
+        <div class="feature">
+          <h3>🎯 NO SCOPE</h3>
+          <p>HEADSHOT GUARANTEED</p>
+        </div>
+        <div class="feature">
+          <h3>🎮 GAMER FUEL</h3>
+          <p>POWERED BY MEMES</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contract" class="section">
+    <h2 class="rainbow-text">CONTRACT</h2>
+    <div class="content-box">
+      <div class="contract-address">
+        <p>53cAR9mpCvTJtNzzfk2THM2bmFs9LvRFwHUYL26Wpump</p>
+        <button class="mlg-button small" onclick="copyContract()">COPY</button>
+      </div>
+      <div class="contract-badges">
+        <span class="badge">AUDITED</span>
+        <span class="badge">BASED</span>
+        <span class="badge">SAFU</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="lore" class="section">
+    <h2 class="rainbow-text">THE LORE</h2>
+    <div class="content-box">
+      <div class="lore-grid">
+        <div class="lore-item">
+          <h3>🎤 The Catchphrase</h3>
+          <p>Eddy Wally's distinctive "Wow!" became highly recognizable in MLG parody videos, emphasizing epic gaming moments with dramatic flair.</p>
+        </div>
+        <div class="lore-item">
+          <h3>🎬 MLG Style</h3>
+          <p>His presence perfectly matched MLG's chaotic editing style with dubstep, air horns, lens flares, and classic elements like Doritos and Mountain Dew.</p>
+        </div>
+        <div class="lore-item">
+          <h3>👑 The Legend</h3>
+          <p>With his flamboyant style and eccentric outfits, Eddy's larger-than-life persona naturally fit MLG's ironic and exaggerated humor.</p>
+        </div>
+        <div class="lore-item">
+          <h3>🌟 The Legacy</h3>
+          <p>Though not a gamer, Eddy's meme soundbite became synonymous with MLG culture, cementing his place in internet history forever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="memes" class="section">
+    <h2 class="rainbow-text">MEME GALLERY</h2>
+    <div class="content-box">
+      <div class="meme-grid">
+        <div class="meme-item">
+          <img src="https://gcdnb.pbrd.co/images/XL12NhLL1reO.webp?o=1" alt="MLG Meme">
+        </div>
+        <div class="meme-item">
+          <img src="https://gcdnb.pbrd.co/images/T36hBIgE1cI7.jpg?o=1" alt="MLG Meme">
+        </div>
+        <div class="meme-item">
+          <img src="https://gcdnb.pbrd.co/images/1G0QvNT7kxVQ.jpg?o=1" alt="MLG Meme">
+        </div>
+        <div class="meme-item">
+          <img src="https://gcdnb.pbrd.co/images/PrvhTMrSLr0t.jpg?o=1" alt="MLG Meme">
+        </div>
+        <div class="meme-item">
+          <img src="https://gcdnb.pbrd.co/images/ymnDTjQtuvF0.jpg?o=1" alt="MLG Meme">
+        </div>
+        <div class="meme-item">
+          <img src="https://gcdnb.pbrd.co/images/1ZYe37UgNd4X.jpg?o=1" alt="MLG Meme">
+        </div>
+        <div class="meme-item">
+          <img src="https://gcdnb.pbrd.co/images/9LHjVGOTQtr1.jpg?o=1" alt="MLG Meme">
+        </div>
+        <div class="meme-item">
+          <img src="https://gcdnb.pbrd.co/images/RnUGUyOC8ZCR.jpg?o=1" alt="MLG Meme">
+        </div>
+        <div class="meme-item">
+          <img src="https://gcdnb.pbrd.co/images/bYCY8UmkX8dX.jpg?o=1" alt="MLG Meme">
+        </div>
+        <div class="meme-item">
+          <img src="https://gcdnb.pbrd.co/images/PPvPSRadExnY.jpg?o=1" alt="MLG Meme">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="game" class="section game-section">
+    <h2 class="rainbow-text">PLAY WOW CLICKER!</h2>
+    <div class="content-box">
+      <div class="webgl-container">
+        <iframe src="https://pac-man-coin.github.io/WowCoin/" frameborder="0"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="roadmap" class="section">
+    <h2 class="rainbow-text">ROADMAP</h2>
+    <div class="content-box">
+      <div class="roadmap-items">
+        <div class="roadmap-item">
+          <h3>PHASE 1: LAUNCH 🚀</h3>
+          <p>✅ Website Launch</p>
+          <p>✅ WOW Clicker Game</p>
+          <p>✅ WOW GENERATOR</p>
+          <p>💰 WOW GIVEAWAY</p>
+          <p>- WOW AI</p>
+        </div>
+        <div class="roadmap-item">
+          <h3>PHASE 2: MOON 🌙</h3>
+          <p>- CEX Listings</p>
+          <p>- Doritos Partnership</p>
+          <p>- WOW NFTs</p>
+        </div>
+        <div class="roadmap-item">
+          <h3>PHASE 3: BEYOND 💫</h3>
+          <p>- WOW Metaverse</p>
+          <p>- MLG Integration</p>
+          <p>- Much WOW</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="memegen" class="section game-section">
+    <h2 class="rainbow-text">WOW GENERATOR!</h2>
+    <div class="content-box">
+      <div class="webgl-container">
+        <iframe src="https://pac-man-coin.github.io/WowCoinPFPGenerator/" frameborder="0"></iframe>
+      </div>
+    </div>
+  </section>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
